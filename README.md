@@ -147,7 +147,7 @@ swift-localizer translate --in Localizable.xcstrings \
 ## Development
 
 ```bash
-git clone https://github.com/yourusername/swift-localizer.git
+git clone https://github.com/jeef84/swift-localizer.git
 cd swift-localizer
 npm install
 npm run build
@@ -175,9 +175,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- [GitHub Issues](https://github.com/yourusername/swift-localizer/issues)
-- [Documentation](https://github.com/yourusername/swift-localizer#readme)
-- [Examples](https://github.com/yourusername/swift-localizer/examples)
+- [GitHub Issues](https://github.com/jeef84/swift-localizer/issues)
+- [Documentation](https://github.com/jeef84/swift-localizer#readme)
+- [Examples](https://github.com/jeef84/swift-localizer/examples)
 
 ---
 
