@@ -1,0 +1,63 @@
+{
+  "name": "swift-localizer",
+  "version": "1.0.0",
+  "description": "CLI tool to scan, validate, and translate Xcode .xcstrings localization files using AI",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "swift-localizer": "dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "scan": "tsx src/cli.ts scan",
+    "validate": "tsx src/cli.ts validate",
+    "translate": "tsx src/cli.ts translate",
+    "repair-placeholders": "tsx src/cli.ts repair-placeholders",
+    "proofread": "tsx src/cli.ts proofread",
+    "formality": "tsx src/cli.ts formality",
+    "suggest": "tsx src/cli.ts suggest",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "swift",
+    "swiftui",
+    "localization",
+    "xcstrings",
+    "xcode",
+    "ios",
+    "macos",
+    "translation",
+    "ai",
+    "openai",
+    "cli"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/swift-localizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/swift-localizer/issues"
+  },
+  "homepage": "https://github.com/yourusername/swift-localizer#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "commander": "^12.1.0",
+    "p-limit": "^5.0.0",
+    "openai": "^4.57.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/commander": "^2.12.5",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
