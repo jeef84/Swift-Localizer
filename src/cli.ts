@@ -45,7 +45,7 @@ program
   .requiredOption('--in <path>', 'Path to .xcstrings input')
   .option('--out <path>', 'Output path (defaults to overwrite input)')
   .option('--langs <list>', 'Comma separated language codes')
-  .option('--model <model>', 'OpenAI model', 'gpt-4.1-mini')
+  .option('--model <model>', 'OpenAI model', 'gpt-4.1-nano')
   .option('--concurrency <n>', 'Parallel requests', (v) => parseInt(v, 10))
   .option('--batch-size <n>', 'Items per call', (v) => parseInt(v, 10))
   .option('--max-keys <n>', 'Limit keys per language for pilot runs', (v) => parseInt(v, 10))
@@ -95,7 +95,7 @@ program
   .option('--langs <list>', 'Comma separated language codes')
   .option('--fix-placeholders', 'Auto-fix positional placeholder mismatches', true)
   .option('--fill-empties', 'Attempt to translate empty entries', false)
-  .option('--model <model>', 'OpenAI model', 'gpt-4.1-mini')
+  .option('--model <model>', 'OpenAI model', 'gpt-4.1-nano')
   .option('--concurrency <n>', 'Parallel requests', (v) => parseInt(v, 10))
   .option('--batch-size <n>', 'Items per call', (v) => parseInt(v, 10))
   .action(async (opts) => {
@@ -122,7 +122,7 @@ program
   .option('--out <path>', 'Output path (defaults to overwrite input)')
   .requiredOption('--lang <code>', 'Language code (e.g., zh-Hans, ko)')
   .requiredOption('--register <formal|informal>', 'Desired register (formal or informal)')
-  .option('--model <model>', 'OpenAI model', 'gpt-4.1-mini')
+  .option('--model <model>', 'OpenAI model', 'gpt-4.1-nano')
   .option('--include-keys <list>', 'Comma-separated list of keys to include')
   .action(async (opts) => {
     const inputPath = opts.in as string;
@@ -146,7 +146,7 @@ program
   .option('--include-keys <list>', 'Comma-separated list of keys to include')
   .option('--max-keys <n>', 'Limit keys for sampling', (v) => parseInt(v, 10))
   .option('--apply', 'Apply safe suggestions that preserve placeholders', false)
-  .option('--model <model>', 'OpenAI model', 'gpt-4.1-mini')
+  .option('--model <model>', 'OpenAI model', 'gpt-4.1-nano')
   .action(async (opts) => {
     const inputPath = opts.in as string;
     const outputPath = (opts.out as string) || inputPath;

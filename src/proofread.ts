@@ -28,7 +28,7 @@ export async function runProofread(catalog: XCStringsCatalog, opts: ProofreadOpt
   if (opts.fillEmpties) {
     await runTranslate(catalog, {
       langs: opts.langs,
-      model: opts.model ?? 'gpt-4.1-mini',
+      model: opts.model ?? 'gpt-4.1-nano',
       concurrency: opts.concurrency ?? 4,
       batchSize: opts.batchSize ?? 10,
       onlyEmpties: true,

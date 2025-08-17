@@ -11,7 +11,7 @@ A powerful CLI tool to scan, validate, and translate Xcode `.xcstrings` localiza
 - **Validation & repair** - Comprehensive validation and automatic placeholder fixing
 - **Formality control** - Adjust translation register (formal/informal) for specific languages
 - **Proofreading suggestions** - Get AI-powered improvement suggestions
-- **Multi-language support** - Supports 13+ languages including Korean, Chinese, Japanese, German, French, Spanish, and more
+- **Multi-language support** - Supports all languages that OpenAI can translate and Apple supports in Xcode
 
 ## Installation
 
@@ -39,7 +39,7 @@ npm install swift-localizer
 
 3. **Translate to Korean:**
    ```bash
-   swift-localizer translate --in Localizable.xcstrings --langs ko --model gpt-4o-mini
+   swift-localizer translate --in Localizable.xcstrings --langs ko
    ```
 
 4. **Validate the results:**
@@ -58,7 +58,7 @@ swift-localizer scan --in Localizable.xcstrings --langs ko
 ### Translate
 Translate your strings using AI:
 ```bash
-swift-localizer translate --in Localizable.xcstrings --langs ko --model gpt-4o-mini
+swift-localizer translate --in Localizable.xcstrings --langs ko
 ```
 
 ### Validate
@@ -96,7 +96,7 @@ swift-localizer suggest --in Localizable.xcstrings --lang de --apply
 - `--in <path>`: Path to input `.xcstrings` file
 - `--out <path>`: Output path (defaults to overwriting input)
 - `--langs <list>`: Comma-separated language codes
-- `--model <model>`: OpenAI model (default: gpt-4o-mini)
+- `--model <model>`: OpenAI model (default: gpt-4.1-nano)
 - `--concurrency <n>`: Parallel requests (default: 8)
 - `--batch-size <n>`: Items per request (default: 25)
 - `--max-keys <n>`: Limit keys for pilot runs
@@ -106,9 +106,13 @@ swift-localizer suggest --in Localizable.xcstrings --lang de --apply
 
 ## Supported Languages
 
+Swift Localizer supports all languages that OpenAI can translate and Apple supports in Xcode. This includes but is not limited to:
+
+**Common Languages:**
 - English (source): `en`
 - Arabic: `ar`
 - Chinese (Simplified): `zh-Hans`
+- Chinese (Traditional): `zh-Hant`
 - French: `fr`
 - German: `de`
 - Hindi: `hi`
@@ -116,9 +120,28 @@ swift-localizer suggest --in Localizable.xcstrings --lang de --apply
 - Japanese: `ja`
 - Korean: `ko`
 - Portuguese (Brazil): `pt-BR`
+- Portuguese (Portugal): `pt-PT`
 - Spanish: `es`
 - Spanish (Latin America): `es-419`
 - Vietnamese: `vi`
+
+**Additional Languages:**
+- Dutch: `nl`
+- Russian: `ru`
+- Turkish: `tr`
+- Polish: `pl`
+- Swedish: `sv`
+- Norwegian: `no`
+- Danish: `da`
+- Finnish: `fi`
+- Greek: `el`
+- Hebrew: `he`
+- Thai: `th`
+- Indonesian: `id`
+- Malay: `ms`
+- And many more...
+
+Simply use the appropriate language code (e.g., `fr`, `de`, `ja`) and Swift Localizer will handle the translation using OpenAI's advanced language capabilities.
 
 ## Advanced Usage
 
